@@ -1,0 +1,784 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #171717;
+  background: #f6f6f3;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+textarea,
+input {
+  font-family: inherit;
+}
+
+/* =========================
+   APP
+========================= */
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(220, 220, 210, 0.5),
+      transparent 30%
+    ),
+    #f6f6f3;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #deded9;
+  background: rgba(246, 246, 243, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  border-radius: 8px;
+  background: #171717;
+  color: white;
+  font-size: 12px;
+}
+
+.logo span:last-child {
+  color: #777;
+}
+
+.nav-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22a06b;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main-container {
+  width: min(1100px, 90%);
+  margin: auto;
+  padding: 75px 0 80px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #d8d8d2;
+  border-radius: 100px;
+  color: #666;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  background: #fbfbf9;
+}
+
+.hero h1 {
+  margin-top: 25px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(42px, 6vw, 70px);
+  line-height: 1.03;
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  color: #8b8b86;
+}
+
+.hero-description {
+  max-width: 620px;
+  margin: 25px auto 0;
+  color: #70706b;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* =========================
+   WORKSPACE
+========================= */
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 60px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #deded9;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.025);
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.card-header > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: #171717;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.card h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 19px;
+}
+
+.required {
+  padding: 5px 9px;
+  border-radius: 100px;
+  background: #f1f1ed;
+  color: #777;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-description {
+  margin: 17px 0;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+
+textarea {
+  width: 100%;
+  min-height: 230px;
+  resize: vertical;
+  padding: 16px;
+  border: 1px solid #deded9;
+  border-radius: 12px;
+  outline: none;
+  background: #fafaf8;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: 0.2s;
+}
+
+textarea::placeholder {
+  color: #aaa;
+}
+
+textarea:focus {
+  border-color: #999;
+  background: white;
+}
+
+.character-count {
+  margin-top: 8px;
+  text-align: right;
+  color: #aaa;
+  font-size: 11px;
+}
+
+/* =========================
+   UPLOAD
+========================= */
+
+.upload-box {
+  min-height: 230px;
+  border: 1.5px dashed #cfcfc8;
+  border-radius: 14px;
+  background: #fafaf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.upload-box:hover,
+.upload-box.drag-active {
+  border-color: #777;
+  background: #f4f4f0;
+}
+
+.upload-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #171717;
+  color: white;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.upload-box h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+}
+
+.upload-box p {
+  margin-top: 7px;
+  color: #888;
+  font-size: 13px;
+}
+
+.upload-box label {
+  color: #171717;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.file-types {
+  margin-top: 14px;
+  color: #aaa;
+  font-size: 11px;
+}
+
+/* =========================
+   SELECTED FILE
+========================= */
+
+.selected-file {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+}
+
+.file-icon {
+  font-size: 25px;
+}
+
+.file-info {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 4px;
+}
+
+.file-info strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.file-info span {
+  color: #999;
+  font-size: 11px;
+}
+
+.remove-file {
+  border: none;
+  background: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+}
+
+.remove-file:hover {
+  color: #171717;
+}
+
+/* =========================
+   ANALYZE
+========================= */
+
+.analyze-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.analyze-button {
+  border: none;
+  padding: 16px 24px;
+  border-radius: 11px;
+  background: #171717;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  transition: 0.2s;
+}
+
+.analyze-button:hover {
+  transform: translateY(-2px);
+  background: #303030;
+}
+
+.arrow {
+  font-size: 18px;
+}
+
+.analyze-section p {
+  margin-top: 12px;
+  color: #999;
+  font-size: 11px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .main-container {
+    padding-top: 50px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .nav-status {
+    display: none;
+  }
+
+  .main-container {
+    width: 92%;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.error-box {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #e2b8b8;
+  border-radius: 14px;
+  background: #fff7f7;
+}
+
+.error-box strong {
+  font-size: 14px;
+}
+
+.error-box p {
+  margin-top: 6px;
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result-box {
+  margin-top: 40px;
+  padding: 35px;
+  border: 1px solid #deded9;
+  border-radius: 18px;
+  background: white;
+  text-align: center;
+}
+
+.result-box h2 {
+  font-family: "Space Grotesk", sans-serif;
+  margin-bottom: 15px;
+}
+
+.result-box h1 {
+  font-size: 70px;
+  margin: 20px 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.result-box p {
+  color: #666;
+  line-height: 1.6;
+}
+/* =========================
+   RESULT SECTION
+========================= */
+
+/* =========================
+   RESULT DASHBOARD
+========================= */
+
+.result-box {
+  width: 92%;
+  max-width: 1050px;
+  margin: 60px auto;
+  padding: 45px;
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 28px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   RESULT HEADER
+========================= */
+
+.result-header {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.result-label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+.result-header h2 {
+  margin: 0 0 30px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+}
+
+
+/* =========================
+   SCORE
+========================= */
+
+.score-circle {
+  width: 155px;
+  height: 155px;
+  margin: 0 auto 14px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #111;
+  color: white;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.score-circle span {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.score-text {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.result-section {
+  padding: 32px 0;
+  border-top: 1px solid #eeeeee;
+}
+
+.result-section h3 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+}
+
+
+/* =========================
+   AI CONCLUSION
+========================= */
+
+.conclusion {
+  margin: 0;
+
+  padding: 22px 24px;
+
+  background: #f7f7f7;
+  border: 1px solid #ededed;
+
+  border-radius: 16px;
+
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   SKILLS GRID
+========================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+
+/* =========================
+   SKILL CARDS
+========================= */
+
+.skill-card {
+  padding: 25px;
+
+  border: 1px solid #eeeeee;
+  border-radius: 18px;
+
+  background: #fafafa;
+}
+
+.skill-card h3 {
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   SKILL TAGS
+========================= */
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 9px 14px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.skill-tag.matching {
+  background: #e9f8ef;
+  color: #18743c;
+  border: 1px solid #d4efdf;
+}
+
+.skill-tag.missing {
+  background: #fff0f0;
+  color: #c62828;
+  border: 1px solid #ffd8d8;
+}
+
+
+/* =========================
+   EXPERIENCE + EDUCATION
+========================= */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.info-card {
+  padding: 25px;
+
+  border: 1px solid #eeeeee;
+  border-radius: 18px;
+
+  background: #fafafa;
+}
+
+.info-card h3 {
+  margin-bottom: 12px;
+}
+
+.info-card p {
+  margin: 0;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-card {
+  padding: 22px 24px;
+  margin-bottom: 14px;
+
+  background: #fafafa;
+
+  border: 1px solid #eeeeee;
+  border-radius: 16px;
+
+  color: #555;
+
+  font-size: 15px;
+  line-height: 1.7;
+
+  transition: 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: #d5d5d5;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.certification {
+  display: inline-block;
+
+  padding: 10px 15px;
+  margin: 0 8px 8px 0;
+
+  background: #f3f3f3;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 999px;
+
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .result-box {
+    width: 94%;
+    padding: 25px;
+    margin-top: 35px;
+  }
+
+  .result-header h2 {
+    font-size: 26px;
+  }
+
+  .score-circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .score-circle span {
+    font-size: 36px;
+  }
+
+  .skills-grid,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
