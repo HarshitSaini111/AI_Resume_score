@@ -69,13 +69,13 @@ function App() {
       );
 
       // Send request to backend
-      const response = await fetch(
-        "http://127.0.0.1:8000/api/analyze",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+     const response = await fetch(
+  "https://ai-resume-score-08ih.onrender.com/api/analyze",
+  {
+    method: "POST",
+    body: formData,
+  }
+);
 
       // Get JSON response
       const data = await response.json();
